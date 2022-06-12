@@ -1,0 +1,19 @@
+{
+  "name": "expenses-chart-component",
+  "version": "1.0.0",
+  "description": "📊 Creating a bar chart component from scratch",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://CarolineLienard@github.com/CarolineLienard/Expenses-Chart-Component.git"
+  },
+  "author": "Caroline",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarolineLienard/Expenses-Chart-Component/issues"
+  },
+  "homepage": "https://github.com/CarolineLienard/Expenses-Chart-Component#readme"
+}
