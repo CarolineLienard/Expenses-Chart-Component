@@ -1,5 +1,5 @@
 # Expenses-Chart-Component
-📊 Creating a bar chart component from scratch 
+# 📊 Creating a bar chart component from scratch 
 
 This is my solution to the Expenses component chart challenge from Frontend Mentor. In this challenge, you need to create a bar chart component from scratch using vanilla Javascript.
 
