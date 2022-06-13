@@ -11,25 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-
-    My balance
-    $921.48
-
-    Spending - Last 7 days
-
-    mon
-    tue
-    wed
-    thu
-    fri
-    sat
-    sun
-
-    Total this month
-    $478.33
-
-    +2.4%
-    from last month
-    
+    <main>
+      <div class="chart-component">
+        <div class="balance-container">
+          <img src="./images/logo.svg" alt="">
+          <div class="balance-container__details">
+            <p>My balance</p>
+            <span>$921.48</span>
+          </div>
+        </div>
+        <div class="chart-container">
+          <h1>Spending - Last 7 days</h1>
+          <div class="chart-container__stats">
+            <!-- here the chart -->
+          </div>
+          <div class="chart-container__info">
+            <div class="chart-container__info--current">
+              <span>Total this month</span>
+              <span>$478.33</span>
+            </div>
+            <div class="chart-container__info--last">
+              <span>+2.4%</span>
+              <span>from last month</span>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </main>
   </body>
 </html>
