@@ -10,11 +10,12 @@
           const barContainer = document.createElement("div");
           barContainer.classList.add("barContainer");
           container.appendChild(barContainer);
-          barContainer.setAttribute("barStat", "$" + stat.amount);
 
           const bar = document.createElement("div");
           bar.classList.add("bar");
           barContainer.appendChild(bar);
+          bar.setAttribute("barStat", "$" + stat.amount);
+
 
           const dayLabel = document.createElement("div");
           dayLabel.classList.add("day");

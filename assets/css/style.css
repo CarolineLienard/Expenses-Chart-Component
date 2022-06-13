@@ -109,7 +109,13 @@ main .statsList .container .barContainer {
   display: flex;
   flex-direction: column-reverse;
 }
-main .statsList .container .barContainer:hover::before {
+main .statsList .container .barContainer .bar {
+  background-color: hsl(10deg, 79%, 65%);
+  width: 50.36px;
+  border-radius: 5px;
+  position: relative;
+}
+main .statsList .container .barContainer .bar:hover::before {
   content: attr(barStat);
   width: 65px;
   padding: 7px 5px 7px 5px;
@@ -122,13 +128,8 @@ main .statsList .container .barContainer:hover::before {
   text-align: center;
   justify-content: center;
   position: absolute;
-  margin-top: -2.4rem;
+  top: -2.5rem;
   margin-left: -0.6rem;
-}
-main .statsList .container .barContainer .bar {
-  background-color: hsl(10deg, 79%, 65%);
-  width: 50.36px;
-  border-radius: 5px;
 }
 main .statsList .container .barContainer .bar:hover {
   cursor: pointer;
