@@ -10,7 +10,7 @@ main {
         .balance-container {
             background-color: $softRed;
             border-radius: 20px;
-            color: white;
+            color: $cardWhite;
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
@@ -32,7 +32,7 @@ main {
             }
         }
         .chart-container {
-            background-color: white;
+            background-color: $cardWhite;
             border-radius: 20px;
             &__separator {
                 border: 0.5px solid $cream;
@@ -66,46 +66,55 @@ main {
             }
         }
     }
-}
-
-.statsList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 40px 32px 40px;
-    .container {
-        .bar {
-            background-color: $softRed;
-            width: 50.36px;
-            height: 150px;
-            border-radius: 5px;
-            &:hover {
-                cursor: pointer;
-                background-color: red;
+    .statsList {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        height: 10em;
+        margin: 0px 40px 40px 40px;
+        .container {
+            height: 100%;
+            .barContainer {
+                display: flex;
+                flex-direction: column-reverse;
+                &:hover::before {
+                    content: attr(barStat);
+                    width: 65px;
+                    padding: 7px 5px 7px 5px;
+                    background-color: $darkBrown;
+                    color: $cardWhite;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    position: absolute;
+                    margin-top: -2.4rem;
+                    margin-left: -0.6rem;
+                }
+                .bar {
+                    background-color: $softRed;
+                    width: 50.36px;
+                    border-radius: 5px;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $hoverRed;
+                    }
+                }
+                #max {
+                    background-color: $cyan;
+                    &:hover {
+                        background-color: $hoverCyan;
+                    }
+                }
+            }
+            .day {
+                color: $mediumBrown;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 8px;
             }
         }
-        .day {
-            color: $mediumBrown;
-            font-size: 18px;
-            text-align: center;
-            margin-top: 8px;
-        }
     }
-}
-
-.bar:hover::before {
-    content: attr(barStat);
-    width: 65px;
-    padding: 7px 5px 7px 5px;
-    background-color: $darkBrown;
-    color: $cardWhite;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 18px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    margin-top: -2.4rem;
-    margin-left: -0.6rem;
 }

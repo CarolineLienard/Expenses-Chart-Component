@@ -1,6 +1,8 @@
 /* Colors */
 /* Primary */
 /* Neutral */
+/* Hover */
+/* Responsive */
 /** Breakpoint **/
 /** Responsive mixins **/
 body {
@@ -38,7 +40,7 @@ main .chart-component {
 main .chart-component .balance-container {
   background-color: hsl(10deg, 79%, 65%);
   border-radius: 20px;
-  color: white;
+  color: #FFFBF6;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -60,7 +62,7 @@ main .chart-component .balance-container__details span {
   font-size: 2em;
 }
 main .chart-component .chart-container {
-  background-color: white;
+  background-color: #FFFBF6;
   border-radius: 20px;
 }
 main .chart-component .chart-container__separator {
@@ -93,31 +95,21 @@ main .chart-component .chart-container__info--last span:nth-child(1) {
   color: hsl(25deg, 47%, 15%);
   font-weight: 700;
 }
-
-.statsList {
+main .statsList {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0px 40px 32px 40px;
+  align-items: baseline;
+  height: 10em;
+  margin: 0px 40px 40px 40px;
 }
-.statsList .container .bar {
-  background-color: hsl(10deg, 79%, 65%);
-  width: 50.36px;
-  height: 150px;
-  border-radius: 5px;
+main .statsList .container {
+  height: 100%;
 }
-.statsList .container .bar:hover {
-  cursor: pointer;
-  background-color: red;
+main .statsList .container .barContainer {
+  display: flex;
+  flex-direction: column-reverse;
 }
-.statsList .container .day {
-  color: hsl(27deg, 10%, 52%);
-  font-size: 18px;
-  text-align: center;
-  margin-top: 8px;
-}
-
-.bar:hover::before {
+main .statsList .container .barContainer:hover::before {
   content: attr(barStat);
   width: 65px;
   padding: 7px 5px 7px 5px;
@@ -132,6 +124,27 @@ main .chart-component .chart-container__info--last span:nth-child(1) {
   position: absolute;
   margin-top: -2.4rem;
   margin-left: -0.6rem;
+}
+main .statsList .container .barContainer .bar {
+  background-color: hsl(10deg, 79%, 65%);
+  width: 50.36px;
+  border-radius: 5px;
+}
+main .statsList .container .barContainer .bar:hover {
+  cursor: pointer;
+  background-color: #FF9B86;
+}
+main .statsList .container .barContainer #max {
+  background-color: hsl(186deg, 34%, 60%);
+}
+main .statsList .container .barContainer #max:hover {
+  background-color: #B4E0E5;
+}
+main .statsList .container .day {
+  color: hsl(27deg, 10%, 52%);
+  font-size: 18px;
+  text-align: center;
+  margin-top: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
