@@ -65,7 +65,7 @@ main .chart-component .chart-container {
 }
 main .chart-component .chart-container__separator {
   border: 0.5px solid hsl(27deg, 66%, 92%);
-  margin: 0px 40px 0px 40px;
+  margin: 0em 2.2em 0em 2.2em;
 }
 main .chart-component .chart-container__info {
   display: flex;
@@ -73,7 +73,7 @@ main .chart-component .chart-container__info {
   align-items: flex-end;
   color: hsl(28deg, 10%, 53%);
   font-size: 1.12em;
-  padding: 32px 40px 40px 40px;
+  padding: 2em 2.2em 2.2em 2.2em;
 }
 main .chart-component .chart-container__info--current {
   display: flex;
@@ -81,7 +81,7 @@ main .chart-component .chart-container__info--current {
 }
 main .chart-component .chart-container__info--current span:nth-child(2) {
   color: hsl(25deg, 47%, 15%);
-  font-size: 48px;
+  font-size: 2.7em;
   font-weight: 700;
 }
 main .chart-component .chart-container__info--last {
