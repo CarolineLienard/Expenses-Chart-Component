@@ -3,5 +3,95 @@
 /* Neutral */
 /** Breakpoint **/
 /** Responsive mixins **/
+body {
+  min-height: 100vh;
+  background-color: hsl(27deg, 66%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans";
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  padding: 32px 150px 66px 40px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .chart-component {
+  width: 100%;
+}
+@media screen and (max-width: 570px) {
+  main .chart-component {
+    width: 90%;
+  }
+}
+main .chart-component .balance-container {
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+main .chart-component .balance-container img {
+  width: 4.5em;
+  margin-right: 2.4em;
+}
+main .chart-component .balance-container__details {
+  margin: 1.6em 0em 1.5em 2em;
+}
+main .chart-component .balance-container__details p {
+  font-size: 1.12em;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+}
+main .chart-component .balance-container__details span {
+  font-weight: 700;
+  font-size: 2em;
+}
+main .chart-component .chart-container {
+  background-color: white;
+  border-radius: 20px;
+}
+main .chart-component .chart-container__separator {
+  border: 0.5px solid hsl(27deg, 66%, 92%);
+  margin: 0px 40px 0px 40px;
+}
+main .chart-component .chart-container__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: hsl(28deg, 10%, 53%);
+  font-size: 1.12em;
+  padding: 32px 40px 40px 40px;
+}
+main .chart-component .chart-container__info--current {
+  display: flex;
+  flex-direction: column;
+}
+main .chart-component .chart-container__info--current span:nth-child(2) {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 48px;
+  font-weight: 700;
+}
+main .chart-component .chart-container__info--last {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+}
+main .chart-component .chart-container__info--last span:nth-child(1) {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=style.css.map */
