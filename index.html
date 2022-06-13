@@ -47,9 +47,19 @@
       .then(res => {
       const statsList = document.getElementById("statsList")
         for (let stat of res) {
+          const container = document.createElement("div")
+          statsList.appendChild(container);
+          container.classList.add("container");
+
           const bar = document.createElement("div");
           bar.classList.add("bar");
-          statsList.appendChild(bar);
+          container.appendChild(bar);
+          bar.setAttribute("barStat", "$" + stat.amount);
+
+          const dayLabel = document.createElement("div");
+          dayLabel.classList.add("day");
+          dayLabel.innerText = stat.day;
+          container.appendChild(dayLabel);
         }
       }) 
     </script>
