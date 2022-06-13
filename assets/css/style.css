@@ -94,4 +94,17 @@ main .chart-component .chart-container__info--last span:nth-child(1) {
   font-weight: 700;
 }
 
+.statsList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 40px 32px 40px;
+}
+.statsList .bar {
+  background-color: hsl(10deg, 79%, 65%);
+  width: 50.36px;
+  height: 150px;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */

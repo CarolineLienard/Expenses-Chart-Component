@@ -66,4 +66,17 @@ main {
             }
         }
     }
-}    
+}
+
+.statsList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px 32px 40px;
+    .bar {
+        background-color: $softRed;
+        width: 50.36px;
+        height: 150px;
+        border-radius: 5px;
+    }
+}
