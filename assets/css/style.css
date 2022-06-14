@@ -146,7 +146,7 @@ main .chart-container .statsList .container .barContainer .bar {
   position: relative;
 }
 main .chart-container .statsList .container .barContainer .bar:hover::before {
-  content: attr(barStat);
+  content: attr(data-barStat);
   width: 3em;
   font-weight: 700;
   font-size: 0.8em;

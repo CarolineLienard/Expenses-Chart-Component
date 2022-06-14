@@ -15,7 +15,7 @@
           const bar = document.createElement("div");
           bar.classList.add("bar");
           barContainer.appendChild(bar);
-          bar.setAttribute("barStat", "$" + stat.amount);
+          bar.setAttribute("data-barStat", "$" + stat.amount);
 
           const dayLabel = document.createElement("div");
           dayLabel.classList.add("day");

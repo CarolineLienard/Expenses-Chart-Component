@@ -44,7 +44,7 @@ main {
                         border-radius: 5px;
                         position: relative;
                         &:hover::before {
-                            content: attr(barStat);
+                            content: attr(data-barStat);
                             width: 3em;
                             font-weight: 700;
                             font-size: 0.8em;
