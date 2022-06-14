@@ -5,117 +5,91 @@
 /* Responsive */
 /** Breakpoint **/
 /** Responsive mixins **/
-body {
-  min-height: 100vh;
-  background-color: hsl(27deg, 66%, 92%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
   font-family: "DM Sans";
 }
 
-p {
+body {
+  background-color: hsl(27deg, 66%, 92%);
   margin: 0;
+  padding: 0;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 700;
-  padding: 32px 150px 66px 40px;
+  margin: auto 0.5em;
+}
+
+p {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: auto;
+  line-height: 1.2em;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: fit-content;
+  max-width: 90%;
+  margin: 6rem auto;
 }
-main .chart-component {
-  width: 100%;
-}
-@media screen and (max-width: 570px) {
-  main .chart-component {
-    width: 90%;
-  }
-}
-main .chart-component .balance-container {
+main .balance-container {
   background-color: hsl(10deg, 79%, 65%);
-  border-radius: 20px;
   color: #FFFBF6;
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
 }
-main .chart-component .balance-container img {
-  width: 4.5em;
-  margin-right: 2.4em;
-}
-main .chart-component .balance-container__details {
-  margin: 1.6em 0em 1.5em 2em;
-}
-main .chart-component .balance-container__details p {
-  font-size: 1.12em;
-  font-weight: 400;
-  margin-bottom: 0.4em;
-}
-main .chart-component .balance-container__details span {
+main .balance-container p:nth-child(2) {
+  font-size: 1.6em;
   font-weight: 700;
-  font-size: 2em;
 }
-main .chart-component .chart-container {
+main .chart-container {
   background-color: #FFFBF6;
   border-radius: 20px;
 }
-main .chart-component .chart-container__separator {
-  border: 0.5px solid hsl(27deg, 66%, 92%);
-  margin: 0em 2.2em 0em 2.2em;
+main .chart-container .statsList {
+  height: 9em;
+  justify-content: center;
+  margin: 2em 0em 0.2em 0em;
 }
-main .chart-component .chart-container__info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  color: hsl(27deg, 10%, 52%);
-  font-size: 1.12em;
-  padding: 2em 2.2em 2.2em 2.2em;
-}
-main .chart-component .chart-container__info--current {
-  display: flex;
-  flex-direction: column;
-}
-main .chart-component .chart-container__info--current span:nth-child(2) {
-  color: hsl(25deg, 47%, 15%);
-  font-size: 2.7em;
-  font-weight: 700;
-}
-main .chart-component .chart-container__info--last {
-  text-align: end;
-  display: flex;
-  flex-direction: column;
-}
-main .chart-component .chart-container__info--last span:nth-child(1) {
-  color: hsl(25deg, 47%, 15%);
-  font-weight: 700;
-}
-main .statsList {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  height: 10em;
-  margin: 0px 40px 40px 40px;
-}
-main .statsList .container {
+main .chart-container .statsList .container {
+  width: 2em;
   height: 100%;
+  gap: 0.8em;
 }
-main .statsList .container .barContainer {
-  display: flex;
+main .chart-container .statsList .container .barContainer {
   flex-direction: column-reverse;
+  width: 100%;
 }
-main .statsList .container .barContainer .bar {
+main .chart-container .statsList .container .barContainer .bar {
   background-color: hsl(10deg, 79%, 65%);
-  width: 50.36px;
+  width: 100%;
   border-radius: 5px;
   position: relative;
 }
-main .statsList .container .barContainer .bar:hover::before {
+main .chart-container .statsList .container .barContainer .bar:hover::before {
   content: attr(barStat);
   width: 65px;
   padding: 7px 5px 7px 5px;
@@ -131,21 +105,41 @@ main .statsList .container .barContainer .bar:hover::before {
   top: -2.5rem;
   margin-left: -0.6rem;
 }
-main .statsList .container .barContainer .bar:hover {
+main .chart-container .statsList .container .barContainer .bar:hover {
   cursor: pointer;
   background-color: #FF9B86;
 }
-main .statsList .container .barContainer #max {
+main .chart-container .statsList .container .barContainer #max {
   background-color: hsl(186deg, 34%, 60%);
 }
-main .statsList .container .barContainer #max:hover {
+main .chart-container .statsList .container .barContainer #max:hover {
   background-color: #B4E0E5;
 }
-main .statsList .container .day {
+main .chart-container .statsList .container .day {
   color: hsl(27deg, 10%, 52%);
-  font-size: 18px;
   text-align: center;
-  margin-top: 8px;
+  font-size: 0.8em;
+}
+main .chart-container__separator {
+  border: 1px solid hsl(27deg, 66%, 92%);
+  width: 100%;
+  margin: 0.5em 0em 0.5em 0em;
+}
+main .chart-container__info {
+  color: hsl(27deg, 10%, 52%);
+  align-items: flex-end;
+  margin: 0.3em 0em 0.8em 0em;
+}
+main .chart-container__info--last p:nth-child(1) {
+  font-weight: 700;
+  color: hsl(25deg, 47%, 15%);
+  text-align: end;
+}
+main .chart-container__info--current p:nth-child(2) {
+  font-size: 2.3em;
+  font-weight: 700;
+  color: hsl(25deg, 47%, 15%);
+  text-align: start;
 }
 
 /*# sourceMappingURL=style.css.map */

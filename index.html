@@ -11,34 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main>
-      <div class="chart-component">
-        <div class="balance-container">
-          <img src="./images/logo.svg" alt="">
-          <div class="balance-container__details">
-            <p>My balance</p>
-            <span>$921.48</span>
+    <main class="flex column">
+      <div class="balance-container flex card center between">
+        <img src="./images/logo.svg" alt="">
+        <div class="balance-container__details">
+          <p>My balance</p>
+          <p>$921.48</p>
+        </div>
+      </div>
+      <div class="chart-container card flex column">
+        <h1>Spending - Last 7 days</h1>
+        <div class="statsList" id="statsList">
+          <!-- here the chart -->
+        </div>
+        <div class="chart-container__separator">
+        </div>
+        <div class="chart-container__info flex between">
+          <div class="chart-container__info--current">
+            <p>Total this month</p>
+            <p>$478.33</p>
+          </div>
+          <div class="chart-container__info--last">
+            <p>+2.4%</p>
+            <p>from last month</p>
           </div>
         </div>
-        <div class="chart-container">
-          <h1>Spending - Last 7 days</h1>
-          <div class="statsList" id="statsList">
-            <!-- here the chart -->
-          </div>
-          <div class="chart-container__separator">
-          </div>
-          <div class="chart-container__info">
-            <div class="chart-container__info--current">
-              <span>Total this month</span>
-              <span>$478.33</span>
-            </div>
-            <div class="chart-container__info--last">
-              <span>+2.4%</span>
-              <span>from last month</span>
-            </div>
-          </div>
-        </div>
-      </div>    
+      </div>
     </main>
     <script src="script.js" type="text/javascript"></script>
   </body>

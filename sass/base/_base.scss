@@ -1,18 +1,45 @@
-body {
-    min-height: 100vh;
-    background-color: $cream;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
     font-family: "DM Sans";
 }
 
-p {
+body {
+    background-color: $cream;
     margin: 0;
+    padding: 0;
 }
 
 h1 {
- font-size: 2em;
+ font-size: 1.7em;
  font-weight: 700;
- padding: 32px 150px 66px 40px;           
+ margin: auto 0.5em;
+}
+
+p {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin: auto;
+    line-height: 1.2em;
+}
+
+.card {
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.center {
+    align-items: center;
+}
+
+.between {
+    justify-content: space-between;
 }

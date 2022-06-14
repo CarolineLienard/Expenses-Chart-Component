@@ -2,13 +2,14 @@
       .then(data => data.json())
       .then(res => {
       const statsList = document.getElementById("statsList")
+      statsList.classList.add("flex", "center");
         for (let stat of res) {
           const container = document.createElement("div");
           statsList.appendChild(container);
-          container.classList.add("container");
+          container.classList.add("container", "flex", "column");
 
           const barContainer = document.createElement("div");
-          barContainer.classList.add("barContainer");
+          barContainer.classList.add("barContainer", "flex");
           container.appendChild(barContainer);
 
           const bar = document.createElement("div");
