@@ -2,7 +2,7 @@
 /* Primary */
 /* Neutral */
 /* Hover */
-/** component animation **/
+/** Component animation **/
 @keyframes appear {
   0% {
     transform: translateY(30px);
@@ -21,6 +21,7 @@
     transform: rotate(360deg);
   }
 }
+/** Loader Disappear **/
 @keyframes dis {
   100% {
     opacity: 0;
@@ -74,25 +75,20 @@ p {
   justify-content: space-between;
 }
 
-.loader {
-  display: flex;
-  align-items: center;
+.justify {
   justify-content: center;
-  z-index: 2;
+}
+
+/* Loader */
+.loader {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
   position: fixed;
   background: hsl(10deg, 79%, 65%);
   animation: dis 1s forwards 2.6s;
 }
 .loader .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-right: 2em;
   animation: spin 1.5s forwards 0.5s;
 }
 .loader .icon #logo {
@@ -101,8 +97,8 @@ p {
 
 main {
   width: fit-content;
+  margin: 5em auto;
   max-width: 90%;
-  margin: 6rem auto;
 }
 main .balance-container {
   animation: appear 1s ease 3.5s forwards;
@@ -130,7 +126,6 @@ main .chart-container {
 }
 main .chart-container .statsList {
   height: 9em;
-  justify-content: center;
   margin: 2em 0em 0.2em 0em;
   gap: 0.8em;
 }

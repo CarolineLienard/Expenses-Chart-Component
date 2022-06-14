@@ -1,4 +1,4 @@
-/** component animation **/
+/** Component animation **/
 @keyframes appear{
     0%{
         transform: translateY(30px);
@@ -19,6 +19,7 @@
     }
 }
 
+/** Loader Disappear **/
 @keyframes dis {
     100% {
         opacity: 0;

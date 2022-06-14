@@ -2,7 +2,7 @@
       .then(data => data.json())
       .then(res => {
       const statsList = document.getElementById("statsList")
-      statsList.classList.add("flex", "center");
+      statsList.classList.add("flex", "center", "justify");
         for (let stat of res) {
           const container = document.createElement("div");
           statsList.appendChild(container);
